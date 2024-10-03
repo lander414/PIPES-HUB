@@ -1,0 +1,74 @@
+/* style(create_admin).css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.create-admin-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-admin-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-admin-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.create-admin-container input[type="text"],
+.create-admin-container input[type="password"],
+.create-admin-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.create-admin-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.create-admin-container input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.message {
+    text-align: center;
+    color: green;
+    margin-bottom: 15px;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    margin-bottom: 15px;
+}
+
+.create-admin-container a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.create-admin-container a:hover {
+    text-decoration: underline;
+}

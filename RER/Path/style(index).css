@@ -1,0 +1,245 @@
+/* General styling for both light and dark mode */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Site name */
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Header buttons and search bar container */
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* Search bar container */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; /* Space between search bar and buttons */
+}
+
+/* Search input styling */
+.search-input {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px; /* Adjust width as needed */
+    margin-right: 5px; /* Space between input and button */
+}
+
+/* Search button styling */
+.search-button {
+    padding: 7px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+/* Header button styling */
+.header-btn {
+    margin-left: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.header-btn:hover {
+    background-color: #45a049;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .search-input {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+body.dark-mode .search-button {
+    background-color: #00796b;
+}
+
+body.dark-mode .search-button:hover {
+    background-color: #004d40;
+}
+
+body.dark-mode .modal-content {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .close {
+    color: #e0e0e0;
+}
+
+body.dark-mode .close:hover {
+    color: #ccc;
+}
+
+/* Modal background styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content box styling */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    text-align: left;
+    animation: fadeIn 0.3s ease-out; /* Animation for modal appearance */
+}
+
+/* Modal title styling */
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #4CAF50; /* Accent border */
+    padding-bottom: 10px;
+}
+
+/* Close button (X) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50; /* Close button color */
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333; /* Change color on hover */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Animation for modal appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Image Grid */
+.image-grid-container {
+    display: flex;
+    justify-content: flex-end; /* Align the image grid to the right */
+    margin-right: 20px; /* Adds a margin on the right */
+    margin-top: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Space between images */
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 400px; /* Increased width to accommodate larger images */
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    max-width: 200px; /* Increased image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds some depth */
+    transition: transform 0.2s ease; /* Adds hover effect */
+}
+
+.grid-item img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
